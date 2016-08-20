@@ -1,6 +1,6 @@
 <h1>Song Details</h1>
 <ul>
-  
+
   <li><%= @song.title %></li>
   <li><%= @song.id %></li>
   <li><%= @song.released%></li>
@@ -10,3 +10,7 @@
   <li><%= @song.updated_at %></li>
   <li><%= @song.created_at %></li>
 </ul>
+
+<%= form_tag(song_path(@song), method: "delete") do %>
+  <%= submit_tag("Delete") %>
+<% end %>
